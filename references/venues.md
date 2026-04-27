@@ -1,13 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '10f83c55-2d5f-4a2c-bc75-731421a0fa3e'
-  PropagateID: '10f83c55-2d5f-4a2c-bc75-731421a0fa3e'
-  ReservedCode1: '29815cf0-f139-4c52-9cbd-9f3c297bc7c0'
-  ReservedCode2: '29815cf0-f139-4c52-9cbd-9f3c297bc7c0'
----
 
 # 各会议/期刊格式要求与审稿偏好
 
@@ -108,5 +98,3 @@ AIGC:
 - 致谢单独成页
 - 参考文献通常100+篇
 - 附录可放补充实验、证明推导
-
-> AI生成

@@ -1,13 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '98d761b4-839c-4c85-b039-394a125b63ae'
-  PropagateID: '98d761b4-839c-4c85-b039-394a125b63ae'
-  ReservedCode1: '6a9bf3d7-b47f-45a3-a167-412c6b5d46b8'
-  ReservedCode2: '6a9bf3d7-b47f-45a3-a167-412c6b5d46b8'
----
 
 # 三维重建/新视角合成 术语对照表
 
@@ -182,4 +172,3 @@ AIGC:
     - Multi-view depth：多视角深度融合
     - **错误**：在单目深度论文中不做尺度归一化讨论
 
-> AI生成

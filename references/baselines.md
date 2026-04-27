@@ -1,13 +1,4 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: 'f87031ad-a9b6-432d-a45d-b441aaaec990'
-  PropagateID: 'f87031ad-a9b6-432d-a45d-b441aaaec990'
-  ReservedCode1: '957e4ccb-5985-493f-8475-f93db35deecd'
-  ReservedCode2: '957e4ccb-5985-493f-8475-f93db35deecd'
----
+
 
 # 各方向主流基线方法与核心指标
 
@@ -95,4 +86,3 @@ AIGC:
 
 CAD建模、3D形状理解/生成、3D场景理解的详细基线与数据集见 [cad-3d.md](cad-3d.md)。
 
-> AI生成

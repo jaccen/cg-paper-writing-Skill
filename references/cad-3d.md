@@ -1,13 +1,3 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '96611491-9cae-45b9-bf06-292f7d365dc9'
-  PropagateID: '96611491-9cae-45b9-bf06-292f7d365dc9'
-  ReservedCode1: 'c3c84438-6d7f-4a77-8282-aec67e9a624f'
-  ReservedCode2: 'c3c84438-6d7f-4a77-8282-aec67e9a624f'
----
 
 # CAD/3D 方向术语、基线与数据集
 
@@ -132,4 +122,3 @@ AIGC:
 | COV | Coverage | ↑ | 生成多样性 |
 | PPL | Perplexity of prompt distribution | — | 文本条件生成的多样性 |
 
-> AI生成

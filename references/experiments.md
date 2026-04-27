@@ -1,13 +1,4 @@
----
-AIGC:
-  ContentProducer: '001191110102MAD55U9H0F10002'
-  ContentPropagator: '001191110102MAD55U9H0F10002'
-  Label: '1'
-  ProduceID: '20953b8f-ded4-439a-ab03-01bc3b92d75a'
-  PropagateID: '20953b8f-ded4-439a-ab03-01bc3b92d75a'
-  ReservedCode1: 'e77ec736-4deb-4deb-b3d4-8be46a2a7a8c'
-  ReservedCode2: 'e77ec736-4deb-4deb-b3d4-8be46a2a7a8c'
----
+
 
 # 标准实验设计与常见数据集配置
 
@@ -107,5 +98,3 @@ AIGC:
 
 ### "公平对比？"
 - 应对：确保使用相同的训练配置、相同的评估视角、相同的SfM初始化
-
-> AI生成
