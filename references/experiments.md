@@ -98,3 +98,37 @@
 
 ### "公平对比？"
 - 应对：确保使用相同的训练配置、相同的评估视角、相同的SfM初始化
+
+## 新增数据集（2024-2026）
+
+### 前馈重建数据集
+
+| 数据集 | 类型 | 场景数 | 评估指标 | 标准切分 |
+|---|---|---|---|---|
+| RealEstate10K | 视频序列 | 77K | PSNR/SSIM/LPIPS | 训练/测试按视频划分 |
+| ACID | 多视角图像 | 1.6K | PSNR/SSIM/LPIPS | 标准训练/测试 |
+| DL3DV | 大尺度场景 | 61 | PSNR/SSIM/LPIPS | 50%训练/50%测试 |
+| Shiny Blender | 高光材质 | 6 | PSNR/SSIM/LPIPS | 标准划分 |
+
+### SLAM评估数据集
+
+| 数据集 | 类型 | 场景数 | 核心指标 | 挑战 |
+|---|---|---|---|---|
+| Replica | 室内 | 18 | PSNR/SSIM | 有GT深度 |
+| TUM RGB-D | 室内+深度 | — | ATE↑ | 序列数据 |
+| EuRoC MAV | 室内 | 37 | ATE↑ | 多摄像头 |
+| Waymo Open | 户外自动驾驶 | — | mAP | 真实大场景 |
+| KITTI-360 | 户外全景 | — | PSNR/SSIM | 大运动 |
+
+### 效率表格新增参考值
+
+| 方法 | 场景 | 基元数 | 内存 | FPS | PSNR |
+|---|---|---|---|---|---|
+| 3DGS (30K) | Mip-360 | ~1M | ~1.5GB | 100+ | 27.2 |
+| Mip-Splatting (30K) | Mip-360 | ~1M | ~2GB | ~100 | 28.5 |
+| Scaffold-GS | Mip-360 | ~500K | ~0.8GB | 90+ | 25.0 |
+| HAC (compressed) | Mip-360 | — | ~15MB | ~100 | ~24.5 |
+| Gaussians on a Diet | Mip-360 | — | 80%↓peak | same | ~24.5 |
+| GlobalSplat | RealEstate | 16K | ~4MB | ~13 (78ms) | ~25.0 |
+| SparseSplat (22%) | DL3DV | 150K | — | ~13 | 24.20 |
+

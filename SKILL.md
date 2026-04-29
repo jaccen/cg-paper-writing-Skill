@@ -11,83 +11,40 @@ description: >-
   introduction/related work/methodology/experiment sections, abstract, contribution summary.
 name_cn: 三维视觉与计算机图形学论文写作
 description_cn: 三维视觉/计算机图形学/CAD方向论文写作辅助，涵盖NeRF、3DGS、点云处理、3D形状理解/生成、CAD建模、逆向工程、3D场景理解、SLAM等，支持CVPR/ICCV/SIGGRAPH等顶会及博士论文
+version: 1.1.0
+author: jaccen
+tags:
+  - paper-writing
+  - academic
+  - computer-graphics
+  - 3dgs
+  - nerf
+  - computer-vision
+  - cvpr
+  - siggraph
+trigger:
+  - "写论文"
+  - "论文写作"
+  - "write paper"
+  - "帮我写引言"
+  - "润色"
+  - "去AI痕迹"
+  - "论文格式"
+  - "abstract"
+  - "introduction"
+  - "related work"
+  - "method"
+  - "贡献声明"
+  - "写摘要"
+  - "rebuttal"
+  - "修改论文"
+  - "投稿"
+  - "实验设计"
 ---
 
 # 三维视觉与计算机图形学论文写作
 
 面向三维重建、计算机图形学、CAD建模、3D理解与生成方向的学术写作辅助，覆盖从摘要到结论的全流程。
-
-## 核心领域术语规范
-
-详细术语对照表与易错点见 [references/terminology.md](references/terminology.md)，以下为速查。
-
-### 渲染与重建通用术语
-
-| 中文 | 英文 | 备注 |
-|---|---|---|
-| 新视角合成 | Novel View Synthesis (NVS) | 首字母大写 |
-| 三维高斯泼溅 | 3D Gaussian Splatting (3DGS) | 首次出现写全称 |
-| 神经辐射场 | Neural Radiance Field (NeRF) | 首次出现写全称 |
-| 体密度 | Volume density | σ，勿与opacity混用 |
-| 不透明度 | Opacity | α |
-| 透射率 | Transmittance | T = ∏(1-α) |
-| α合成 | Alpha compositing | 渲染管线核心操作 |
-| 运动恢复结构 | Structure from Motion (SfM) | 初始化步骤 |
-| 多视角立体视觉 | Multi-View Stereo (MVS) | 传统重建范式 |
-| 遮挡关系 | Occlusion | 多视角几何核心问题 |
-
-### CAD与逆向工程术语
-
-| 中文 | 英文 | 备注 |
-|---|---|---|
-| 边界表示 | Boundary Representation (B-rep) | CAD核心表示 |
-| 构造实体几何 | Constructive Solid Geometry (CSG) | 布尔运算建模 |
-| 参数化建模 | Parametric modeling | 草图约束→3D |
-| 逆向工程 | Reverse engineering | 点云/网格→CAD |
-| 草图约束 | Sketch constraint | 2D草图→3D建模 |
-| 拉伸/旋转/扫掠 | Extrude / Revolve / Sweep | 基本体素操作 |
-| 布尔运算 | Boolean operation | 并集/交集/差集 |
-| 特征识别 | Feature recognition | 从网格/点云提取CAD特征 |
-| 自由曲面 | Freeform surface | NURBS/Bézier曲面 |
-| 容差分析 | Tolerance analysis | 工程精度 |
-
-### 3D形状理解术语
-
-| 中文 | 英文 | 备注 |
-|---|---|---|
-| 点云分割 | Point cloud segmentation | 语义/实例/部件级 |
-| 点云配准 | Point cloud registration | ICP及其变体 |
-| 法线估计 | Normal estimation | 局部几何特征 |
-| 形状补全 | Shape completion | 部分观测→完整形状 |
-| 3D目标检测 | 3D object detection | 点云/体素/鸟瞰图 |
-| 紧凑表示 | Compact representation | 压缩/编码/量化 |
-| 部件分割 | Part segmentation | 按语义部件分解 |
-
-### 3D生成与编辑术语
-
-| 中文 | 英文 | 备注 |
-|---|---|---|
-| 文本到3D | Text-to-3D | 大模型驱动 |
-| 图像到3D | Image-to-3D | 单/多视角 |
-| 3D生成模型 | 3D generative model | GAN/Diffusion/Flow |
-| 形状编辑 | Shape editing | 变形/风格迁移/局部编辑 |
-| 纹理生成 | Texture generation / synthesis | UV映射 + 纹理合成 |
-| 3D感知扩散模型 | 3D-aware diffusion model | 2D扩散模型的3D扩展 |
-| 几何先验 | Geometric prior | 深度/法线/表面法 |
-| 体素化 | Voxelization | 点云/网格→体素网格 |
-
-### 3D场景理解术语
-
-| 中文 | 英文 | 备注 |
-|---|---|---|
-| 语义分割 | Semantic segmentation | 逐点/逐面片分类 |
-| 实例分割 | Instance segmentation | 区分同类不同个体 |
-| 场景重建 | Scene reconstruction | 室内/室外/城市级 |
-| SLAM | Simultaneous Localization and Mapping | 实时位姿估计与建图 |
-| 深度估计 | Depth estimation | 单目/双目/多目 |
-| 鸟瞰图 | Bird's Eye View (BEV) | 自动驾驶常用表示 |
-| 3D占用网格 | 3D occupancy grid | 体素级语义占据 |
-| 场景流 | Scene flow | 3D运动场估计 |
 
 ## 写作流程
 
@@ -165,6 +122,97 @@ description_cn: 三维视觉/计算机图形学/CAD方向论文写作辅助，�
 - 不同场景难度（室内/室外、简单/复杂）
 - 鲁棒性分析（噪声、遮挡、稀疏视角）
 
+### 贡献声明（Contribution Statement）
+
+好的贡献声明：
+1. **具体**：指明技术机制，而非"提出了一种新方法"
+2. **可度量**：附带预期指标提升
+3. **差异化**：清楚说明与已有工作的区别
+4. **诚实**：不夸大效果
+
+模板：
+```
+- We propose [具体技术] that [具体机制]。Unlike [已有工作] which [局限]，our approach [优势]，achieving [具体结果]。
+- We introduce [组件] that enables [能力]。This [具体收益]，as demonstrated by [实验/分析]。
+- We conduct extensive experiments on [N] benchmarks，demonstrating [具体成果] over [M] state-of-the-art methods.
+```
+
+## 核心领域术语规范
+
+详细术语对照表与易错点见 [references/terminology.md](references/terminology.md)，以下为速查。
+
+### 渲染与重建通用术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 新视角合成 | Novel View Synthesis (NVS) | 首字母大写 |
+| 三维高斯泼溅 | 3D Gaussian Splatting (3DGS) | 首次出现写全称 |
+| 神经辐射场 | Neural Radiance Field (NeRF) | 首次出现写全称 |
+| 体密度 | Volume density | σ，勿与opacity混用 |
+| 不透明度 | Opacity | α |
+| 透射率 | Transmittance | T = ∏(1-α) |
+| α合成 | Alpha compositing | 渲染管线核心操作 |
+| 运动恢复结构 | Structure from Motion (SfM) | 初始化步骤 |
+| 多视角立体视觉 | Multi-View Stereo (MVS) | 传统重建范式 |
+| 遮挡关系 | Occlusion | 多视角几何核心问题 |
+
+### CAD与逆向工程术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 边界表示 | Boundary Representation (B-rep) | CAD核心表示 |
+| 构造实体几何 | Constructive Solid Geometry (CSG) | 布尔运算建模 |
+| 参数化建模 | Parametric modeling | 草图约束→3D |
+| 逆向工程 | Reverse engineering | 点云/网格→CAD |
+| 自由曲面 | Freeform surface | NURBS/Bézier曲面 |
+| 容差分析 | Tolerance analysis | 工程精度 |
+
+### 3D形状理解术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 点云分割 | Point cloud segmentation | 语义/实例/部件级 |
+| 点云配准 | Point cloud registration | ICP及其变体 |
+| 法线估计 | Normal estimation | 局部几何特征 |
+| 形状补全 | Shape completion | 部分观测→完整形状 |
+| 3D目标检测 | 3D object detection | 点云/体素/鸟瞰图 |
+| 部件分割 | Part segmentation | 按语义部件分解 |
+
+### 3D生成与编辑术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 文本到3D | Text-to-3D | 大模型驱动 |
+| 图像到3D | Image-to-3D | 单/多视角 |
+| 3D生成模型 | 3D generative model | GAN/Diffusion/Flow |
+| 形状编辑 | Shape editing | 变形/风格迁移/局部编辑 |
+| 几何先验 | Geometric prior | 深度/法线/表面法 |
+| 体素化 | Voxelization | 点云/网格→体素网格 |
+
+### 3D场景理解术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 语义分割 | Semantic segmentation | 逐点/逐面片分类 |
+| 实例分割 | Instance segmentation | 区分同类不同个体 |
+| 场景重建 | Scene reconstruction | 室内/室外/城市级 |
+| SLAM | Simultaneous Localization and Mapping | 实时位姿估计与建图 |
+| 深度估计 | Depth estimation | 单目/双目/多目 |
+| 鸟瞰图 | Bird's Eye View (BEV) | 自动驾驶常用表示 |
+| 场景流 | Scene flow | 3D运动场估计 |
+
+### SLAM与压缩术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 前馈重建 | Feed-forward reconstruction | 单次前向推理，无逐场景优化 |
+| 压缩 | Compression / Compact | 减少存储和传输开销 |
+| 剪枝 | Pruning | 删除基元 |
+| 致密化 | Densification | 增加基元 |
+| 分裂 | Split | 大基元→两个小基元 |
+| 克隆 | Clone | 复制基元到欠重建区域 |
+| 哈希网格上下文 | Hash-grid assisted context | HAC压缩范式 |
+
 ## 审稿人关注点
 
 ### CVPR/ICCV/ECCV 审稿倾向
@@ -215,6 +263,43 @@ description_cn: 三维视觉/计算机图形学/CAD方向论文写作辅助，�
 - AH-GS → 作者已撤稿
 - Ref-NeRF 第一作者 → Verbin D 而非 Barron J T
 
+## 去AI痕迹规则
+
+**必须删除的 AI 写作模式**：
+
+| AI 模式 | 修正方式 |
+|---------|---------|
+| "It is worth noting that..." | 直接删除 |
+| "Furthermore, ..." / "Moreover, ..." | 直接过渡或删除 |
+| "Significantly improves" | 写具体指标："improves PSNR by 1.2 dB" |
+| "Effectively addresses" | "addresses"（去掉副词） |
+| "Leverages" | "uses" / "employs" / "builds on" |
+| "Cutting-edge" / "State-of-the-art" | 引用具体方法 |
+| "In this paper, we propose a novel..." | "This paper proposes..." |
+| 三段式排比（A, B, and C） | 变换句式 |
+| **粗体强调**（非术语） | 仅用于术语的斜体 |
+| 破折号过多 | 改写为独立句子 |
+| "To the best of our knowledge" | 除非确实首次，否则删除 |
+| 通用乐观结尾 | 以具体发现或开放问题结尾 |
+| "值得注意的是" | 直接删除 |
+| "不可或缺" / "至关重要" | 用 "需要" 或 "是...的关键" |
+
+**标准学术用语（保留）**：
+- "本文提出" / "This paper proposes"
+- "由此" / "Consequently"
+- "与之配套" / "Coupled with"
+- "实验结果表明" / "Experimental results show"
+- "基于...的观察" / "Motivated by the observation that..."
+
+## 贡献声明指南
+
+好的贡献声明格式：
+```
+- We propose [具体技术] that [具体机制]。Unlike [已有工作] which [局限]，our approach [优势]，achieving [具体结果]。
+- We introduce [组件] that enables [能力]。This [具体收益]，as demonstrated by [实验/分析]。
+- We conduct extensive experiments on [N] benchmarks，demonstrating [具体成果] over [M] state-of-the-art methods.
+```
+
 ## 资源
 
 ### references/
@@ -224,3 +309,12 @@ description_cn: 三维视觉/计算机图形学/CAD方向论文写作辅助，�
 - [baselines.md](references/baselines.md) — 各方向主流基线方法与核心指标
 - [experiments.md](references/experiments.md) — 标准实验设计与常见数据集配置
 - [cad-3d.md](references/cad-3d.md) — CAD/3D方向术语、基线与数据集
+
+## Rules
+
+1. **Write in flowing prose, never bullet points**（贡献声明和itemized lists除外）
+2. **Every claim needs evidence**：引用或实验数据
+3. **Use mathematical notation efficiently**：一个符号，全文统一含义
+4. **Match the venue's tone**：CVPR更精炼；SIGGRAPH更叙事
+5. **Chinese academic writing**：遵循中文学术惯例（本文/我们/由此/表明）
+6. **Never fabricate data**：需要实验数据时，明确标注"设计目标"或"预期值"

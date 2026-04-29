@@ -1,4 +1,5 @@
 
+
 # 三维重建/新视角合成 术语对照表
 
 ## 数学符号规范
@@ -171,4 +172,53 @@
     - Stereo depth：双目立体匹配
     - Multi-view depth：多视角深度融合
     - **错误**：在单目深度论文中不做尺度归一化讨论
+
+## SLAM术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 同步定位与建图 | SLAM | Simultaneous Localization and Mapping |
+| 位姿估计 | Pose estimation | 相机6DoF |
+| 稠密地图 | Dense map | 高保真重建地图 |
+| 闭环检测 | Loop closure | 消除累积漂移 |
+| 尺度漂移 | Scale drift | 单目SLAM核心问题 |
+| 动态物体移除 | Dynamic object removal | SLAM中的关键挑战 |
+| 不确定性感知 | Uncertainty-aware | WildGS-SLAM核心机制 |
+
+## 前馈/泛化方法术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 前馈重建 | Feed-forward reconstruction | 单次推理，无逐场景优化 |
+| 逐场景优化 | Per-scene optimization | 传统NeRF/3DGS范式 |
+| 泛化能力 | Generalization | 跨场景适用性 |
+| 位姿估计 | Pose estimation | 已知/未知相机 |
+| 稀疏视角 | Sparse-view | 少量输入视角 |
+| 无约束视角 | Unconstrained views | 野外/非结构化采集 |
+
+## 压缩术语
+
+| 中文 | 英文 | 备注 |
+|---|---|---|
+| 哈希网格上下文 | Hash-grid assisted context | HAC压缩核心 |
+| 渐进式压缩 | Progressive compression | 支持多码率 |
+| 训练无关简化 | Training-free simplification | NanoGS方法 |
+| 内存有界训练 | Memory-bounded training | 峰值内存控制 |
+
+## 新增易错（#16-#18）
+
+16. **"SLAM" vs "SfM" 的输出差异**
+    - SfM：离线、批量，输出稀疏点云+相机位姿
+    - SLAM：在线、实时，输出稠密地图
+    - **错误**：将SfM输出称为"SLAM地图"
+
+17. **"前馈" vs "优化"的范式区别**
+    - 前馈：训练一次模型，测试时直接推理（GlobalSplat, MVSplat）
+    - 优化：每个新场景单独训练（标准3DGS）
+    - **错误**：将前馈方法称为"per-scene optimization"
+
+18. **"位姿已知" vs "位姿估计"**
+    - Pose-free：需要同时估计相机位姿（InstantSplat）
+    - Pose-conditioned：位姿作为输入（MVSplat, GS-LRM）
+    - **错误**：在pose-free方法中假设位姿已知
 

@@ -1,4 +1,5 @@
 
+
 # 各会议/期刊格式要求与审稿偏好
 
 ## 计算机视觉顶会
@@ -6,7 +7,7 @@
 ### CVPR (IEEE Conference on Computer Vision and Pattern Recognition)
 
 - **投稿截稿**：通常11月
-- **页数限制**：正文8页 + 参考文献（无上限）
+- **页数限制**：正文8页 + 参考文献（无上限）（2025-2026确认不变）
 - **格式**：IEEE双栏，LaTeX模板 cvpr.sty
 - **审稿周期**：约3个月
 - **审稿倾向**：
@@ -15,6 +16,7 @@
   - 附带补充材料（supplementary）常见
   - 喜欢有实际应用场景的motivation
 - **页码格式**：2024年起使用e-ISBN页码（如10349-10358）
+- **CVPR 2025**：投稿13008篇，录用2878篇（录用率22.1%）
 
 ### ICCV (IEEE/CVF International Conference on Computer Vision)
 
@@ -63,6 +65,28 @@
   - 接受范围比SIGGRAPH/EG更广
   - 适合有潜力但尚不成熟的工作
 
+## 机器学习顶会
+
+### NeurIPS (Conference on Neural Information Processing Systems)
+
+- **投稿截稿**：通常5月
+- **页数限制**：正文9页 + 附录
+- **格式**：NeurIPS-relevant format
+- **审稿倾向**：
+  - 理论贡献权重很高
+  - 偏好方法有理论保证
+  - 实验是加分项但非必需
+  - 口头报告常见
+
+### AAAI (AAAI Conference on Artificial Intelligence)
+
+- **投稿截稿**：通常8月
+- **页数限制**：正文7页 + 附录
+- **审稿倾向**：
+  - 接受范围广，适合有应用价值的工作
+  - 偏好清晰的技术贡献
+  - 不要求深理论但需要实验验证
+
 ## 核心期刊
 
 ### IEEE TVCG (Transactions on Visualization and Computer Graphics)
@@ -98,3 +122,4 @@
 - 致谢单独成页
 - 参考文献通常100+篇
 - 附录可放补充实验、证明推导
+
