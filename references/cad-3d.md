@@ -121,4 +121,3 @@
 | MMD-CD | Maximum Mean Discrepancy (CD) | ↓ | 分布距离，适合少样本 |
 | COV | Coverage | ↑ | 生成多样性 |
 | PPL | Perplexity of prompt distribution | — | 文本条件生成的多样性 |
-

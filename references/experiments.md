@@ -131,4 +131,3 @@
 | Gaussians on a Diet | Mip-360 | — | 80%↓peak | same | ~24.5 |
 | GlobalSplat | RealEstate | 16K | ~4MB | ~13 (78ms) | ~25.0 |
 | SparseSplat (22%) | DL3DV | 150K | — | ~13 | 24.20 |
-
