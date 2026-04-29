@@ -1,5 +1,3 @@
-
-
 # 三维重建/新视角合成 术语对照表
 
 ## 数学符号规范
@@ -71,8 +69,7 @@
 
 2. **"负高斯" vs "负不透明度高斯"**
    - NegGS: 负颜色（negative color），不透明度仍非负
-   - SignGS: 负不透明度（signed opacity）
-   - **错误**：说NegGS引入了负不透明度
+    - **错误**：说NegGS引入了负不透明度
 
 3. **"剪枝" vs "致密化"**
    - Pruning（剪枝）：删除基元，减小模型
@@ -221,4 +218,3 @@
     - Pose-free：需要同时估计相机位姿（InstantSplat）
     - Pose-conditioned：位姿作为输入（MVSplat, GS-LRM）
     - **错误**：在pose-free方法中假设位姿已知
-
